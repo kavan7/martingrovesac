@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import Image from "next/image";
 
@@ -27,7 +28,9 @@ export default function Home() {
   return (
     <main className="">
       <FloatingNav navItems={navItems}/>
+   
       <Hero/>
+  
     </main>
   );
 }

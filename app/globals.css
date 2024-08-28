@@ -1,6 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* styles.css */
+
+.claw-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Adjust the gap between words if needed */
+}
+
+.claw-shape {
+  position: relative;
+  font-size: 4rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: white; /* Default color, can be overridden */
+  clip-path: polygon(
+    0% 0%,    /* Top left */
+    30% 20%,  /* Top left claw */
+    50% 0%,   /* Middle */
+    70% 20%,  /* Top right claw */
+    100% 0%,  /* Top right */
+    100% 100%,/* Bottom right */
+    0% 100%   /* Bottom left */
+  );
+  text-align: center; /* Center the text inside the shape */
+}
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -8,6 +48,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+/* Dark mode custom properties */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -16,7 +57,9 @@
   }
 }
 
+/* Global styles */
 body {
+  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

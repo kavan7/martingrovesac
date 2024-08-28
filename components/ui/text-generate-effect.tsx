@@ -15,7 +15,8 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" ");
+  
   useEffect(() => {
     animate(
       "span",
@@ -24,22 +25,24 @@ export const TextGenerateEffect = ({
         filter: filter ? "blur(0px)" : "none",
       },
       {
-        duration: duration ? duration : 1.5,
+        duration: duration,
         delay: stagger(0.6),
       }
     );
-  }, [scope.current]);
+  }, [scope.current, animate, duration, filter]);
 
   const renderWords = () => {
     return (
       <motion.div ref={scope}>
         {wordsArray.map((word, idx) => {
+          // Apply black color only to the second word (index 1)
+          const isSecondWord = idx === 1;
           return (
             <motion.span
-              key={word + idx}
-              className="text-neutral-300 opacity-0"
+              key={idx} // Unique key based on index
+              className={`text-neutral-300 opacity-0 ${isSecondWord ? 'text-[#eb5e34]' : 'text-[#eb5e34]'}`} // Conditionally apply class
               style={{
-                filter: filter ? "blur(10px)" : "none",
+                filter: filter ? 'blur(10px)' : 'none',
               }}
             >
               {word}{" "}
@@ -53,7 +56,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" text-black text-5xl leading-snug tracking-wide">
+        <div className="text-black text-7xl leading-snug tracking-tight">
           {renderWords()}
         </div>
       </div>

@@ -1,15 +1,24 @@
+"use client";
 import React from "react";
-import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
+import { WavyBackground } from "./ui/wavy-background,";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export function Hero() {
   return (
-    <BackgroundGradientAnimation>
-      <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
-        <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
-         <TextGenerateEffect words="Martingrove SAC"/>
-        </p>
-      </div>
-    </BackgroundGradientAnimation>
+    <div>
+     
+    <WavyBackground className="max-w-7xl mx-auto text-5xl">
+    <TextGenerateEffect words="MARTINGROVE SAC"/>
+
+
+      <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold  ">
+     
+
+      </p>
+      <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+        
+      </p>
+    </WavyBackground>
+    </div>
   );
 }
