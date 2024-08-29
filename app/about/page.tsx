@@ -29,6 +29,7 @@ export default function Home() {
     <main className="">
       <FloatingNav navItems={navItems}/>
       <ParallaxScroll images={images} />;
+      <div className="text-white text-[3vh] absolute top-[75vh] left-1/2 transform -translate-x-1/2 text-center animate-fadeIn"> MCI's Student Administrative Council is dedicated to serving the student body, staff and administration through events, fundraisers and community outreach. Our goal is to contribute to a strong community for everyone at MCI. </div>
     </main>
   );
 }
