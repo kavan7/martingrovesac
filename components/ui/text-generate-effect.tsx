@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
-
+import { GiBearHead } from "react-icons/gi";
 export const TextGenerateEffect = ({
   words,
   className,
@@ -40,12 +40,12 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={idx} // Unique key based on index
-              className={`text-neutral-300 opacity-0 ${isSecondWord ? 'text-[#eb5e34]' : 'text-[#eb5e34]'}`} // Conditionally apply class
+              className={`text-neutral-300 flex flex-row opacity-0 ${isSecondWord ? 'text-[#eb5e34]' : 'text-[#eb5e34]'}`} // Conditionally apply class
               style={{
                 filter: filter ? 'blur(10px)' : 'none',
               }}
             >
-              {word}{" "}
+              {<GiBearHead className="mt-4 mx-5"/>}{"M"}{"A"}{"R"}{"T"}{"I"}{"N"}{"G"}{"R"}{"O"}{"V"}{"E"} {"S"}{"A"}{"C"}
             </motion.span>
           );
         })}
@@ -56,7 +56,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className="text-black text-7xl leading-snug tracking-tight">
+        <div className="text-black flex flex-row text-7xl leading-snug tracking-tight">
           {renderWords()}
         </div>
       </div>
