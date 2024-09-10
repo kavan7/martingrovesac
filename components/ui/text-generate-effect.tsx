@@ -40,7 +40,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={idx} // Unique key based on index
-              className={`text-neutral-300 flex flex-row opacity-0 ${isSecondWord ? 'text-[#eb5e34]' : 'text-[#eb5e34]'}`} // Conditionally apply class
+              className={`text-orange-500 flex flex-row opacity-1 ${isSecondWord ? 'text-[#eb5e34]' : 'text-[#eb5e34]'}`} // Conditionally apply class
               style={{
                 filter: filter ? 'blur(10px)' : 'none',
               }}

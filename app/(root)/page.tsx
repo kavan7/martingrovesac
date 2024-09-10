@@ -35,9 +35,7 @@ export default function Home() {
       <Hero />
       </div>
       <div className="flex justify-center gap-6 h-[20vh]">
-          <ThreeDCardDemo/>
-          <ThreeDCardDemo/>
-          <ThreeDCardDemo/>
+       
         </div>
    
     </main>

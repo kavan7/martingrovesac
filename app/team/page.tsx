@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { TimelineDemo } from "@/components/Timeline";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import Image from "next/image";
@@ -27,7 +28,9 @@ export default function Home() {
   return (
     <main className="">
       <FloatingNav navItems={navItems}/>
-      <Hero/>
+      
+     <TimelineDemo/>
+     
     </main>
   );
 }
